@@ -1,10 +1,14 @@
 package ec.edu.espe.arquitectura.facturacion.repository;
 
+import java.math.BigDecimal;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import ec.edu.espe.arquitectura.facturacion.model.Producto;
-import java.util.List;
-import java.math.BigDecimal;
+import org.springframework.stereotype.Repository;
+
+@Repository
 
 public interface ProductoRepository extends JpaRepository<Producto, String> {
 
