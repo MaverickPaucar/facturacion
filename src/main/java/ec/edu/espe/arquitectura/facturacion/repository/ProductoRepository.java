@@ -9,4 +9,6 @@ public interface ProductoRepository extends JpaRepository<Producto, String> {
 
     List<Producto> findByNombre(String nombre);
 
+    List<Producto> findByNombreLikeOrderByNombre(String nombre);
+
 }
