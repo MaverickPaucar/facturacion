@@ -6,6 +6,7 @@ import ec.edu.espe.arquitectura.facturacion.model.FacturaDetalleImpuesto;
 import org.springframework.stereotype.Repository;
 
 @Repository
+
 public interface FacturaDetalleImpuestoRepository extends JpaRepository<FacturaDetalleImpuesto, Integer> {
 
 }
