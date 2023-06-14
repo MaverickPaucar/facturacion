@@ -52,7 +52,7 @@ public class ImpuestoService {
     }
 
     @Transactional
-    public Impuesto create(Impuesto impuesto) {
+    public Impuesto createImpuesto(Impuesto impuesto) {
         Optional<Impuesto> impuestoOpt = this.impuestoRepository.findById(impuesto.getCodigo());
         Impuesto impuestoTmp = impuestoOpt.get();
         if (impuestoTmp == null) {
@@ -63,7 +63,7 @@ public class ImpuestoService {
     }
 
     @Transactional
-    public ImpuestoPorcentaje create(ImpuestoPorcentaje impuestoPorcentaje) {
+    public ImpuestoPorcentaje createImpuestoPorcentaje(ImpuestoPorcentaje impuestoPorcentaje) {
         if (!this.impuestoPorcentajeRepository.existsById(impuestoPorcentaje.getPk())) {
             return this.impuestoPorcentajeRepository.save(impuestoPorcentaje);
         } else {
@@ -72,7 +72,7 @@ public class ImpuestoService {
     }
 
     @Transactional
-    public Impuesto update(Impuesto impuesto) {
+    public Impuesto updateImpuesto(Impuesto impuesto) {
         Optional<Impuesto> impuestoOpt = this.impuestoRepository.findById(impuesto.getCodigo());
         if (impuestoOpt.isPresent()) {
             Impuesto impuestoTmp = impuestoOpt.get();
